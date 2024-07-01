@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers & Math (Player vs Player)</title>
+    <link rel="stylesheet" href="assets/style.css">
+	    <link rel="stylesheet" href="assets/back.css">
+</head>
+<body>
+<ul class="background">
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+</ul>
+    <div class="back-button">
+        <button onclick="goBack()" class="back-button-style">Back</button>
+    </div>
+        <div id="game-title">[Player VS Player]</div>
+    <div id="turn-indicator">Player's Turn: </div>
+    <div id="timer"></div>
+    <div id="message"></div>
+    <div id="board-container">
+        <div id="board" class="blur"></div>
+    </div>
+    <div id="controls">
+        <div id="player1-points">Player 1's Points: 0</div>
+        <div id="player2-points">Player 2's Points: 0</div>
+		    <button id="start-button" onclick="startGame()">Start Game</button>
+    </div>
+
+    <script src="assets/script.js"></script>
+	    <script>
+        function goBack() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.history.back();
+            }, 500); // Delay for 0.5 seconds
+        }
+		</script>
+</body>
+</html>

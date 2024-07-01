@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <link rel="stylesheet" href="assets/styles1.css">
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            align-items: center;
+            background-color: #f0f0f0;
+            background-image: url('img/background1.jpg'); /* Add background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <div class="back-button">
+        <button onclick="goBack()" class="back-button-style">Back</button>
+    </div>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="pvp()" class="game-button pvp">PvsP</button>
+            <button onclick="pvsai()" class="game-button pvsai">PvsAI</button>
+            <button onclick="pvpn()" class="game-button pvpn">PvsPN</button>
+        </div>
+    </div>
+    <div class="help-button">
+        <button onclick="showInstructions()"><span class="question-mark">?</span></button>
+    </div>
+
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeInstructions()">&times;</span>
+            <h2>How to Play</h2>
+            <p>In order to play this game, the user needs to understand how to play checkers.</p>
+            <p>To move the checker piece, the player needs to answer basic mathematical questions.</p>
+            <p>There will be a timer for you to think about the answer. If the user fails to answer the question, it will be the other player's turn right away.</p>
+            <ul>
+                <li>PvP - Player vs Player</li>
+                <li>PvsAI - Player vs AI</li>
+                <li>PvPN - Player vs Player without the math questions</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.history.back();
+            }, 500); // Delay for 0.5 seconds
+        }
+
+        function pvp() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'vsP/vsP.html';
+            }, 500); // Delay for 0.5 seconds
+        }
+
+        function pvsai() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'vsAI/vsAI.html';
+            }, 500); // Delay for 0.5 seconds
+        }
+
+        function pvpn() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'vsPN/vsPN.html';
+            }, 500); // Delay for 0.5 seconds
+        }
+
+          function showInstructions() {
+            var modal = document.getElementById("instructions-modal");
+            modal.style.display = "block";
+        }
+
+        function closeInstructions() {
+            var modal = document.getElementById("instructions-modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

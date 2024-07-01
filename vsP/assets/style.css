@@ -1,0 +1,167 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#game-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.back-button-style {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.back-button-style:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#game-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#turn-indicator {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: grey;
+  padding: 10px 150px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#timer {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+
+#player1-points, #player2-points {
+  position: fixed;
+  bottom: 50%;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#player1-points {
+  right: 52%;
+  transform: translateY(970%);
+}
+
+#player2-points {
+  left: 52%; 
+  transform: translateY(970%);
+}
+#turn-indicator.player1 {
+  color: black; /* or any color you prefer for Player 1 */
+}
+
+#turn-indicator.player2 {
+  color: grey; /* or any color you prefer for Player 2 */
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  gap: 0;
+  margin-top: 5px;
+  border: 10px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.red-piece, .black-piece {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  top: 5px;
+}
+
+.red-piece.king::after, .black-piece.king::after {
+  content: '👑';
+  font-size: 24px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.red-piece {
+  background-color: red;
+}
+
+.black-piece {
+  background-color: grey;
+}
+
+.selected {
+  outline: 3px solid yellow;
+}
+
+#question-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+#turn-indicator.player1 {
+  background-color: #373837; /* or any color you prefer for Player 1 */
+  color : white;
+}
+
+#turn-indicator.player2 {
+  background-color: grey; /* or any color you prefer for Player 2 */
+    color : white;
+}

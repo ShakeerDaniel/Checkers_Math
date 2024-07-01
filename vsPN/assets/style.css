@@ -1,0 +1,148 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+#timer, #turn-indicator, #message {
+  font-size: 30px;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#board-container {
+  position: relative;
+}
+#game-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px); /* Increased cell size */
+    grid-template-rows: repeat(8, 60px); /* Increased cell size */
+    gap: 0;
+    margin-top: 20px;
+    border: 10px solid #333; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    /* pointer-events: none; <- Remove or comment out this line */
+}
+.back-button-style {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-style:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none; /* Move this to the blur class */
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.red-piece, .black-piece {
+    width: 50px; /* Increased piece size */
+    height: 50px; /* Increased piece size */
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 5px;
+}
+
+.red-piece.king::after, .black-piece.king::after {
+  content: '👑';
+  font-size: 24px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.red-piece {
+  background-color: red;
+}
+
+.black-piece {
+  background-color: grey;
+}
+
+.selected {
+  outline: 3px solid yellow;
+}
+
+#controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#player1-points, #player2-points {
+  position: fixed;
+  bottom: 50%;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+#player1-points {
+	right: 52%;
+    transform: translateY(970%);
+}
+
+#player2-points {
+  left: 52%; 
+   transform: translateY(970%);
+}
+
+#start-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #15B00A; /* Light pastel green */
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white; /* Set the font color to white */
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+#start-button:hover {
+  transform: scale(1.1);
+  border-color: #555; /* Change border color to white on hover */
+}

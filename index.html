@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Checkers & Math</title>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button start" onclick="goToMenu()">Start</button>
+        <button class="button exit" onclick="closeWindow()">Exit</button>
+    </div>
+
+    <script>
+        function goToMenu() {
+            const startButton = document.querySelector(".button.start");
+            startButton.classList.add("animate");
+            setTimeout(() => {
+                window.location.href = "menu.html";
+            }, 500); // Adjust the timeout to match the animation duration
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            background-image: url('img/background-fot.jpg'); /* Add background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end; /* Align items to the bottom */
+            height: 100%; /* Full height of the viewport */
+            width: 100%; /* Full width of the viewport */
+            padding-bottom: 150px; /* Optional: Add padding at the bottom if needed */
+            margin: 0; /* Remove default margin */
+        }
+
+        .button {
+            padding: 10px 25px;
+            margin: 10px;
+            font-size: 50px;
+            cursor: pointer;
+            border: 2px solid black; 
+            border-radius: 25px;
+            background-color: #333;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .button.start {
+            background-color: #28a745; /* Different color for Start button */
+        }
+
+        .button.exit {
+            background-color: #dc3545; /* Different color for Exit button */
+        }
+
+        .button:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+	}
+
+
+    </style>
+</body>
+</html>

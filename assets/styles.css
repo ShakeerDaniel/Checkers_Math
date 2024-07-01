@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Hide overflow to remove scrollbars */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the bottom */
+    height: 100%; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    padding-bottom: 20px; /* Optional: Add padding at the bottom if needed */
+    margin: 0; /* Remove default margin */
+}
+
+.button {
+    padding: 10px 20px; /* Adjust padding to a reasonable size */
+    font-size: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+}

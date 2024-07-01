@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('img/background1.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+    text-align: center;
+    max-width: 100%; /* Ensure the container fits the screen */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding on the sides */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.title {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%; /* Ensure the flex container takes the full width */
+}
+
+.game-button {
+    padding: 20px 40px; /* Increase padding to make the buttons bigger */
+    margin: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    border: 2px solid black; 
+    border-radius: 20px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: fit-content; /* Ensure the button width fits the content */
+    min-width: 200px; /* Set a minimum width for the buttons */
+}
+
+.game-button:hover {
+    transform: scale(1.1);
+}
+
+.game-button.pvp {
+    background-color: #F91A71; /* Light pastel green */
+}
+
+.game-button.pvsai {
+    background-color: #29DA1C; /* Light pastel yellow */
+}
+
+.game-button.pvpn {
+    background-color: #9E33F6; /* Light pastel purple */
+}
+
+.back-button-style {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-style:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.help-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.question-mark {
+    font-size: 24px;
+    color: #0056b3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.question-mark:hover {
+    color: #003366;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers & Math</title>
+    <link rel="stylesheet" href="assets/styles.css">
+	 <link rel="stylesheet" href="assets/back.css">
+</head>
+<body>
+<ul class="background">
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+</ul>
+<div id="game-controls">
+    <div class="back-button">
+        <button onclick="goBack()" class="back-button-style">Back</button>
+    </div>
+    <div id="game-title">[Player VS Computer]</div>
+    <div id="turn-indicator">Player's Turn</div>
+</div>
+<div id="player-points">Player's Points: 0</div>
+<div id="computer-points">Computer's Points: 0</div>
+<div id="board"></div>
+    <div id="question-modal">
+        <p id="question"></p>
+        <input type="text" id="answer" />
+        <button onclick="submitAnswer()">Submit</button>
+    </div>
+    <script src="assets/script8.js"></script>
+		    <script>
+        function goBack() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.history.back();
+            }, 500); // Delay for 0.5 seconds
+        }
+		</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    font-family: Arial, sans-serif;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px); /* Increased cell size */
+    grid-template-rows: repeat(8, 60px); /* Increased cell size */
+    gap: 0;
+    margin-top: 20px;
+    border: 10px solid #333; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+}
+
+#game-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.points-display {
+    position: fixed;
+    bottom: 50%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#player-points, #computer-points {
+  position: fixed;
+  bottom: 50%;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#player-points {
+	right: 53%;
+    transform: translateY(970%);
+}
+
+#computer-points {
+  left: 51%; 
+   transform: translateY(970%);
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.red-piece, .black-piece {
+    width: 50px; /* Increased piece size */
+    height: 50px; /* Increased piece size */
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 5px;
+}
+
+/* Additional style for king pieces */
+.red-piece.king::after, .black-piece.king::after {
+    content: '👑';  
+    font-size: 24px;  
+    position: absolute;
+    top: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.red-piece {
+    background-color: red;
+}
+
+.black-piece {
+    background-color: grey; /* Changed color to grey */
+}
+
+.selected {
+    outline: 3px solid yellow;
+}
+
+#question-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+#controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-button-style {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-style:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#game-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#turn-indicator {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
